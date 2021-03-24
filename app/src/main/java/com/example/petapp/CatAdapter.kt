@@ -4,11 +4,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.petapp.model.Cat
 
 
-class CatAdapter(private val values: List<Cat>) : RecyclerView.Adapter<CatAdapter.ViewHolder>() {
+class CatAdapter(
+        private val values: List<Cat>,
+        private val onClick: (Cat) -> Unit
+) : RecyclerView.Adapter<CatAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -23,6 +27,8 @@ class CatAdapter(private val values: List<Cat>) : RecyclerView.Adapter<CatAdapte
         holder.catName?.text = cat.name
         holder.catKind?.text = cat.kind
         holder.catAge?.text = "${cat.age} years"
+
+        holder.itemView.setOnClickListener() { onClick.invoke(cat) }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
