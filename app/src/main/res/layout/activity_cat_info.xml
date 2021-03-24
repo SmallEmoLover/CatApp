@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatInfoActivity">
+
+  <TextView
+      android:id="@+id/cat_info_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/default_margin"
+      android:textSize="@dimen/font_size_large"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Name" />
+
+  <TextView
+      android:id="@+id/cat_info_bio"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/default_margin"
+      android:textSize="@dimen/font_size_small"
+      app:layout_constraintBottom_toTopOf="@+id/cat_info_owner"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cat_info_title"
+      tools:text="Some bio" />
+
+  <TextView
+      android:id="@+id/cat_info_owner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/default_margin"
+      android:textSize="@dimen/font_size_small"
+      app:layout_constraintBottom_toTopOf="@+id/cat_info_vaccinations"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cat_info_bio"
+      tools:text="Owner info" />
+
+  <TextView
+      android:id="@+id/cat_info_vaccinations"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/default_margin"
+      android:textSize="@dimen/font_size_small"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cat_info_owner"
+      tools:text="Vaccinations info" />
+</androidx.constraintlayout.widget.ConstraintLayout>

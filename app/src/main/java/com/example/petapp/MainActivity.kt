@@ -1,10 +1,9 @@
 package com.example.petapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.petapp.model.Cat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +13,12 @@ class MainActivity : AppCompatActivity() {
         val repository = Repository()
 
         val recyclerView = findViewById<RecyclerView>(R.id.catRecyclerView)
-        val adapter = CatAdapter(repository.createPetList()) {         Toast.makeText(applicationContext, it.name, Toast.LENGTH_SHORT).show();
+
+        val intent = Intent(this, CatInfoActivity::class.java)
+
+        val adapter = CatAdapter(repository.getPetList()) {
+            intent.putExtra("cat", it)
+            startActivity(intent)
         }
         recyclerView.adapter = adapter
     }

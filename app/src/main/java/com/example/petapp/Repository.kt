@@ -4,7 +4,7 @@ import com.example.petapp.model.*
 import java.util.Date
 
 class Repository() {
-    fun createPetList(): List<Cat> {
+    fun getPetList(): List<Cat> {
         val flueVaccine =
                 Vaccination("Flue", Date(2012, 5, 5), "Saint George`s clinic")
         val rabiesVaccine =

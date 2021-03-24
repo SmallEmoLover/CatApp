@@ -1,5 +1,6 @@
 package com.example.petapp.model
 
+import java.io.Serializable
 import java.util.Date
 
 data class Owner(
@@ -8,7 +9,7 @@ data class Owner(
     val middleName: String,
     val birthday: Date,
     val address: String
-) {
+) : Serializable {
     override fun toString() =
         "$name $middleName $surname, birthday - $birthday, address - $address"
 }
