@@ -13,19 +13,12 @@ class CatAdapter(
     private val onClick: (Cat) -> Unit
 ) : RecyclerView.Adapter<CatAdapter.CatHolder>() {
 
-    private fun ViewGroup.createCatHolder() =
-        CatHolder(CatListItemBinding.inflate(LayoutInflater.from(this.context), this, false))
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        parent.createCatHolder()
+        CatHolder(CatListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     override fun getItemCount() = values.size
 
-    override fun onBindViewHolder(holder: CatHolder, position: Int) {
-        val cat = values[position]
-        holder.bind(cat)
-        holder.itemView.setOnClickListener { onClick.invoke(cat) }
-    }
+    override fun onBindViewHolder(holder: CatHolder, position: Int) = holder.bind(values[position])
 
     inner class CatHolder(private val binding: CatListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -34,7 +27,7 @@ class CatAdapter(
             binding.catName.text = cat.name
             binding.catKind.text = cat.kind
             binding.catAge.text = binding.root.context.getString(R.string.cat_list_age, cat.age)
+            itemView.setOnClickListener { onClick(cat) }
         }
-
     }
 }
