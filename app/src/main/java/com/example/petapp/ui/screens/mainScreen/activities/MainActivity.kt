@@ -8,8 +8,6 @@ import com.example.petapp.databinding.ActivityMainBinding
 import com.example.petapp.model.Repository
 import com.example.petapp.ui.screens.catInfoScreen.activities.CatInfoActivity
 
-const val CAT_KEY = "cat"
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             ) {
                 startActivity(
                     Intent(this, CatInfoActivity::class.java)
-                        .putExtra(CAT_KEY, it)
+                        .putExtra(CatInfoActivity.CAT_KEY, it)
                 )
             }
     }

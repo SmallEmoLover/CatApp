@@ -6,9 +6,12 @@ import android.widget.Toast
 import com.example.petapp.R
 import com.example.petapp.databinding.ActivityCatInfoBinding
 import com.example.petapp.model.Cat
-import com.example.petapp.ui.screens.mainScreen.activities.CAT_KEY
 
 class CatInfoActivity : AppCompatActivity() {
+    companion object Keys {
+        val CAT_KEY = "cat"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityCatInfoBinding.inflate(layoutInflater)
