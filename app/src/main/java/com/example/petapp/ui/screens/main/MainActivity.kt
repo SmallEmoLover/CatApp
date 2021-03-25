@@ -1,12 +1,12 @@
-package com.example.petapp.ui.screens.mainScreen.activities
+package com.example.petapp.ui.screens.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.petapp.ui.screens.mainScreen.adapters.CatAdapter
+import com.example.petapp.ui.screens.main.adapters.CatAdapter
 import com.example.petapp.databinding.ActivityMainBinding
 import com.example.petapp.model.Repository
-import com.example.petapp.ui.screens.catInfoScreen.activities.CatInfoActivity
+import com.example.petapp.ui.screens.catInfo.CatInfoActivity
 
 class MainActivity : AppCompatActivity() {
 

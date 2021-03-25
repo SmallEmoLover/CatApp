@@ -1,4 +1,4 @@
-package com.example.petapp.ui.screens.catInfoScreen.activities
+package com.example.petapp.ui.screens.catInfo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

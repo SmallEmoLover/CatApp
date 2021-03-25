@@ -1,6 +1,7 @@
 package com.example.petapp.model
 
 import android.os.Parcelable
+import com.example.petapp.extension.getFancyString
 import kotlinx.android.parcel.Parcelize
 import java.util.*
 

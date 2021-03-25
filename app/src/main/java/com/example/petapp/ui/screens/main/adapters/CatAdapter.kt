@@ -1,4 +1,4 @@
-package com.example.petapp.ui.screens.mainScreen.adapters
+package com.example.petapp.ui.screens.main.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,11 +1,9 @@
 package com.example.petapp.model
 
 import android.os.Parcelable
+import com.example.petapp.extension.getFancyString
 import kotlinx.android.parcel.Parcelize
 import java.util.*
-
-fun GregorianCalendar.getFancyString() =
-    "${this.get(GregorianCalendar.YEAR)}.${this.get(GregorianCalendar.MONTH)}.${this.get(GregorianCalendar.DAY_OF_MONTH)}"
 
 @Parcelize
 data class Owner(
