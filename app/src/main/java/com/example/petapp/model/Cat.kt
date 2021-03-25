@@ -1,7 +1,9 @@
 package com.example.petapp.model
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Cat(
     val name: String,
     var age: Int,
@@ -9,7 +11,7 @@ data class Cat(
     val kind: String,
     var owner: Owner? = null,
     val vaccinations: MutableList<Vaccination> = mutableListOf()
-) : Serializable {
+) : Parcelable {
     override fun toString() =
         """$sex cat $name, $age years old, $kind kind,
             |Owner: ${owner ?: "no owner"}" +

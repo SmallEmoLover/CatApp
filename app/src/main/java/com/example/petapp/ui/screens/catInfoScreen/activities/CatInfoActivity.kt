@@ -14,30 +14,32 @@ class CatInfoActivity : AppCompatActivity() {
         val binding = ActivityCatInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val cat: Cat? = intent.extras?.getSerializable(CAT_KEY) as Cat?
+        val cat: Cat? = intent.extras?.getParcelable(CAT_KEY) as Cat?
         if (cat == null) {
             Toast.makeText(this, "Some error with this cat, sorry :(", Toast.LENGTH_LONG).show()
             finish()
         } else {
-            binding.catInfoTitle.text = cat.name
-            binding.catInfoBio.text =
-                getString(R.string.cat_bio, cat.name, cat.kind, cat.age, cat.sex)
-            binding.catInfoOwner.text =
-                getString(
-                    R.string.cat_owner,
-                    if (cat.owner != null)
-                        cat.owner
-                    else
-                        "This cat have not owner =( So sad"
-                )
-            binding.catInfoVaccinations.text =
-                getString(
-                    R.string.cat_vaccinations,
-                    if (cat.vaccinations.isNotEmpty())
-                        cat.vaccinations.fold("") { result, value -> result + value + "\n" }
-                    else
-                        "No vaccinations"
-                )
+            binding.apply {
+                catInfoTitle.text = cat.name
+                catInfoBio.text =
+                    getString(R.string.cat_bio, cat.name, cat.kind, cat.age, cat.sex)
+                catInfoOwner.text =
+                    getString(
+                        R.string.cat_owner,
+                        if (cat.owner != null)
+                            cat.owner
+                        else
+                            "This cat have not owner =( So sad"
+                    )
+                catInfoVaccinations.text =
+                    getString(
+                        R.string.cat_vaccinations,
+                        if (cat.vaccinations.isNotEmpty())
+                            cat.vaccinations.fold("") { result, value -> result + value + "\n" }
+                        else
+                            "No vaccinations"
+                    )
+            }
         }
     }
 }

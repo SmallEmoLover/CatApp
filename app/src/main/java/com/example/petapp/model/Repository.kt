@@ -1,6 +1,5 @@
 package com.example.petapp.model
 
-import com.example.petapp.model.*
 import java.util.*
 
 class Repository {
