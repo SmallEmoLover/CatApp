@@ -1,8 +1,9 @@
-package com.example.petapp
+package com.example.petapp.ui.screens.mainScreen.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.petapp.R
 import com.example.petapp.databinding.CatListItemBinding
 import com.example.petapp.model.Cat
 

@@ -1,10 +1,12 @@
-package com.example.petapp
+package com.example.petapp.ui.screens.catInfoScreen.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.petapp.R
 import com.example.petapp.databinding.ActivityCatInfoBinding
 import com.example.petapp.model.Cat
+import com.example.petapp.ui.screens.mainScreen.activities.CAT_KEY
 
 class CatInfoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
