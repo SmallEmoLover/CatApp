@@ -13,11 +13,11 @@ class CatAdapter(
     private val onClick: (Cat) -> Unit
 ) : RecyclerView.Adapter<CatAdapter.CatHolder>() {
 
-    private fun ViewGroup.createViewHolder() =
+    private fun ViewGroup.createCatHolder() =
         CatHolder(CatListItemBinding.inflate(LayoutInflater.from(this.context), this, false))
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        parent.createViewHolder()
+        parent.createCatHolder()
 
     override fun getItemCount() = values.size
 
