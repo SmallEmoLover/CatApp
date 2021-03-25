@@ -7,7 +7,7 @@
     tools:context=".CatInfoActivity">
 
   <TextView
-      android:id="@+id/cat_info_title"
+      android:id="@+id/catInfoTitle"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/default_margin"
@@ -18,35 +18,35 @@
       tools:text="Name" />
 
   <TextView
-      android:id="@+id/cat_info_bio"
+      android:id="@+id/catInfoBio"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/default_margin"
       android:textSize="@dimen/font_size_small"
-      app:layout_constraintBottom_toTopOf="@+id/cat_info_owner"
+      app:layout_constraintBottom_toTopOf="@+id/catInfoOwner"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/cat_info_title"
+      app:layout_constraintTop_toBottomOf="@+id/catInfoTitle"
       tools:text="Some bio" />
 
   <TextView
-      android:id="@+id/cat_info_owner"
+      android:id="@+id/catInfoOwner"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/default_margin"
       android:textSize="@dimen/font_size_small"
-      app:layout_constraintBottom_toTopOf="@+id/cat_info_vaccinations"
+      app:layout_constraintBottom_toTopOf="@+id/catInfoVaccinations"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/cat_info_bio"
+      app:layout_constraintTop_toBottomOf="@+id/catInfoBio"
       tools:text="Owner info" />
 
   <TextView
-      android:id="@+id/cat_info_vaccinations"
+      android:id="@+id/catInfoVaccinations"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/default_margin"
       android:textSize="@dimen/font_size_small"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/cat_info_owner"
+      app:layout_constraintTop_toBottomOf="@+id/catInfoOwner"
       tools:text="Vaccinations info" />
 </androidx.constraintlayout.widget.ConstraintLayout>

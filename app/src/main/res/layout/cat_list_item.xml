@@ -5,11 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/default_margin"
-    android:layout_marginTop="@dimen/default_margin">
+    android:layout_margin="@dimen/default_margin">
 
     <TextView
-        android:id="@+id/cat_name"
+        android:id="@+id/catName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/font_size_large"
@@ -18,25 +17,25 @@
         tools:text="Name" />
 
     <TextView
-        android:id="@+id/cat_kind"
+        android:id="@+id/catKind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/font_medium_size"
         android:layout_marginEnd="@dimen/default_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cat_name"
+        app:layout_constraintTop_toBottomOf="@+id/catName"
         tools:text="Kind" />
 
     <TextView
-        android:id="@+id/cat_age"
+        android:id="@+id/catAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_margin"
         android:textSize="@dimen/font_medium_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/cat_kind"
-        app:layout_constraintTop_toBottomOf="@+id/cat_name"
+        app:layout_constraintStart_toEndOf="@+id/catKind"
+        app:layout_constraintTop_toBottomOf="@+id/catName"
         tools:text="Age" />
 
 
