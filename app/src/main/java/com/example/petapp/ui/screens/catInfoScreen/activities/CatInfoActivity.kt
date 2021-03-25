@@ -29,10 +29,7 @@ class CatInfoActivity : AppCompatActivity() {
                 catInfoOwner.text =
                     getString(
                         R.string.cat_owner,
-                        if (cat.owner != null)
-                            cat.owner
-                        else
-                            "This cat have not owner =( So sad"
+                        cat.owner ?: "This cat have not owner =( So sad"
                     )
                 catInfoVaccinations.text =
                     getString(
