@@ -25,10 +25,7 @@ class CatAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cat = values[position]
-        holder.catName?.text = cat.name
-        holder.catKind?.text = cat.kind
-        holder.catAge?.text = "${cat.age} years"
-
+        holder.bind(cat)
         holder.itemView.setOnClickListener { onClick.invoke(cat) }
     }
 
@@ -36,6 +33,13 @@ class CatAdapter(
         var catName: TextView? = null
         var catAge: TextView? = null
         var catKind: TextView? = null
+
+        fun bind(cat: Cat) {
+            catName?.text = cat.name
+            catKind?.text = cat.kind
+            catAge?.text = "${cat.age} years"
+
+        }
 
         init {
             catName = itemView.findViewById(R.id.cat_name)
