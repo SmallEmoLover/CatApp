@@ -32,7 +32,7 @@ class CatAdapter(
         fun bind(cat: Cat) {
             binding.catName.text = cat.name
             binding.catKind.text = cat.kind
-            binding.catAge.text = "${cat.age} years"
+            binding.catAge.text = binding.root.context.getString(R.string.cat_list_age, cat.age)
         }
 
     }

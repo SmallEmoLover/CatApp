@@ -19,12 +19,23 @@ class CatInfoActivity : AppCompatActivity() {
         } else {
             binding.catInfoTitle.text = cat.name
             binding.catInfoBio.text =
-                "It`s ${cat.name} - ${cat.kind} ${cat.age} years old ${cat.sex} cat"
+                getString(R.string.cat_bio, cat.name, cat.kind, cat.age, cat.sex)
             binding.catInfoOwner.text =
-                "It`s cat owner!\n${cat.owner ?: "This cat have not owner =( So sad"}"
+                getString(
+                    R.string.cat_owner,
+                    if (cat.owner != null)
+                        cat.owner
+                    else
+                        "This cat have not owner =( So sad"
+                )
             binding.catInfoVaccinations.text =
-                "It`s cat vaccinations:\n${cat.vaccinations.fold("") { result, value -> result + value + "\n" }
-                    .ifEmpty { "No vaccinations" }}"
+                getString(
+                    R.string.cat_vaccinations,
+                    if (cat.vaccinations.isNotEmpty())
+                        cat.vaccinations.fold("") { result, value -> result + value + "\n" }
+                    else
+                        "No vaccinations"
+                )
         }
     }
 }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PetApp</string>
+    <string name="cat_bio">It`s %1$s - %2$s %3$d years old %4$s cat</string>
+    <string name="cat_owner">It`s cat owner:\n%1$s</string>
+    <string name="cat_vaccinations">It`s cat vaccinations:\n%1$s</string>
+    <string name="cat_list_age"> %1$d years </string>
 </resources>
